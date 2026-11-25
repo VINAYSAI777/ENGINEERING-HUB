@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engineering Hub</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header>
+    <h1>Engineering Hub</h1>
+    <p>Your engineering study materials, all in one place.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Student Account</h2>
+      <input id="email" type="email" placeholder="Email address">
+      <input id="password" type="password" placeholder="Password">
+      <button id="signup">Create Account</button>
+      <button id="login">Login</button>
+      <button id="logout">Logout</button>
+      <p id="message">Loading...</p>
+    </section>
+
+    <section class="panel">
+      <h2>Upload Study Materials</h2>
+      <select id="branch">
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="MECH">MECH</option>
+        <option value="CIVIL">CIVIL</option>
+      </select>
+      <input id="year" placeholder="Year (e.g. 2nd Year)">
+      <input id="subject" placeholder="Subject">
+      <input id="file" type="file">
+      <button id="upload">Upload Material</button>
+    </section>
+
+    <section class="panel">
+      <h2>Available Materials</h2>
+      <button id="refresh">Refresh Materials</button>
+      <div id="materials">Loading materials...</div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
